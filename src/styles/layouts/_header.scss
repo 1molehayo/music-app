@@ -1,0 +1,33 @@
+.header {
+  position: relative;
+  width: 100%;
+  border-bottom: 2px solid color(light-grey);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 7rem;
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 2rem;
+    }
+  }
+
+  &__logo {
+    @include font-weight(bold);
+    font-size: 2rem;
+
+    @include themed() {
+      color: theme-color(logo);
+    }
+
+    @include respond(large) {
+      font-size: 2.6rem;
+    }
+  }
+}

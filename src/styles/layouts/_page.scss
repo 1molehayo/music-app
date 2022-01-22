@@ -1,0 +1,22 @@
+.page {
+  @include themed() {
+    background-color: theme-color(secondary);
+    color: theme-color(text-shade1);
+  }
+
+  &--backdrop {
+    overflow: hidden;
+  }
+
+  &-body {
+    min-height: 80vh;
+  }
+
+  &--no-overflow {
+    overflow: hidden;
+  }
+
+  &--default {
+    overflow: auto;
+  }
+}
