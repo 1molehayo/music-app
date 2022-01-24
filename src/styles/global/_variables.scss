@@ -7,18 +7,18 @@ $colors: (
   light-grey: #eee,
   primary: #2d9cdb,
   red: #f00,
-  white: #fff
+  white: #fff,
 );
 
 $font-families: (
-  archivo: 'Archivo',
-  icomoon: 'icomoon'
+  roboto: "Roboto",
+  icomoon: "icomoon",
 );
 
 $font-weights: (
   regular: 400,
   medium: 500,
-  bold: 700
+  bold: 700,
 );
 
 $font-sizes: (
@@ -29,7 +29,7 @@ $font-sizes: (
   medium: 1.8rem,
   large: 2.3rem,
   m-large: 3rem,
-  x-large: 3.4rem
+  x-large: 3.4rem,
 );
 
 $max-width: 129rem;
@@ -51,10 +51,10 @@ $break-points: (
 );
 
 $device-sizes: (
-  sm: 'small',
-  md: 'medium',
-  lg: 'large',
-  xl: 'largest'
+  sm: "small",
+  md: "medium",
+  lg: "large",
+  xl: "largest",
 );
 
 $sides: (top, bottom, left, right);
