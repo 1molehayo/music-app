@@ -16,14 +16,6 @@
     height: 5rem;
     border: 0;
     background: transparent;
-
-    @include respond(large) {
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
   }
 
   input[type='text'] {
@@ -34,16 +26,6 @@
     padding: 0.3rem 1.3rem;
     padding-right: 6.3rem;
     border-radius: 5rem;
-
-    @include themed() {
-      border: 1px solid rgba($color: theme-color(text-shade1), $alpha: 0.5);
-      background-color: theme-color(secondary);
-      color: theme-color(text-shade2);
-
-      &::placeholder {
-        color: rgba($color: theme-color(text-shade1), $alpha: 0.6);
-      }
-    }
   }
 
   &-wrapper {
@@ -58,11 +40,6 @@
       padding: 0.8rem 1.8rem;
       border: 0;
       border-radius: 2rem;
-
-      @include themed() {
-        background-color: theme-color(primary);
-        color: theme-color(secondary);
-      }
     }
   }
 }

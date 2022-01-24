@@ -7,18 +7,19 @@ $colors: (
   light-grey: #eee,
   primary: #2d9cdb,
   red: #f00,
-  white: #fff,
+  white: #fff
 );
 
 $font-families: (
-  roboto: "Roboto",
-  icomoon: "icomoon",
+  roboto: 'Roboto',
+  icomoon: 'icomoon'
 );
 
 $font-weights: (
+  light: 300,
   regular: 400,
   medium: 500,
-  bold: 700,
+  bold: 700
 );
 
 $font-sizes: (
@@ -29,32 +30,29 @@ $font-sizes: (
   medium: 1.8rem,
   large: 2.3rem,
   m-large: 3rem,
-  x-large: 3.4rem,
+  x-large: 3.4rem
 );
-
-$max-width: 129rem;
-$gutter-width: 1rem;
-$num-of-columns: 12;
 
 // mobile first
 $break-points: (
   // large mobile phones
-  smallest: 480px,
+  smallest: 0px,
   // small tabs or phablets
   small: 600px,
   // tabs and ipads
-  medium: 768px,
+  medium: 900px,
   // large tabs / large ipads / small laptops
-  large: 990px,
+  large: 1200px,
   // laptops / desktops
-  largest: 1200px
+  extra-large: 1536px
 );
 
 $device-sizes: (
-  sm: "small",
-  md: "medium",
-  lg: "large",
-  xl: "largest",
+  xs: 'extra-small',
+  sm: 'small',
+  md: 'medium',
+  lg: 'large',
+  xl: 'extra-large'
 );
 
 $sides: (top, bottom, left, right);

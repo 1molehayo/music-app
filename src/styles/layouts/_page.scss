@@ -1,9 +1,4 @@
 .page {
-  @include themed() {
-    background-color: theme-color(secondary);
-    color: theme-color(text-shade1);
-  }
-
   &--backdrop {
     overflow: hidden;
   }

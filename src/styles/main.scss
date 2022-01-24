@@ -1,40 +1,39 @@
 // global
-@import "global/variables";
-@import "global/themes";
-@import "global/functions";
-@import "global/mixins";
+@import 'global/variables';
+@import 'global/functions';
+@import 'global/mixins';
 
 // vendors
-@import "vendors/icomoon";
-@import "vendors/toastify";
+@import 'vendors/icomoon';
+@import 'vendors/toastify';
 
 // base
-@import "base/resets";
-@import "base/fonts";
-@import "base/typography";
-@import "base/base";
-@import "base/animation";
+@import 'base/resets';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/base';
+@import 'base/animation';
 
 // components
-@import "components/empty-card";
-@import "components/loader";
-@import "components/modal";
-@import "components/searchbar";
-@import "components/switch";
+@import 'components/empty-card';
+@import 'components/loader';
+@import 'components/modal';
+@import 'components/searchbar';
+@import 'components/switch';
 
 // layout
-@import "layouts/footer";
-@import "layouts/header";
-@import "layouts/page";
-@import "layouts/section";
+@import 'layouts/footer';
+@import 'layouts/header';
+@import 'layouts/page';
+@import 'layouts/section';
 
 // pages
-@import "pages/home";
+@import 'pages/home';
 
 // themes
-@import "themes/dark";
-@import "themes/default";
+@import 'themes/dark';
+@import 'themes/default';
 
 // helpers
-@import "helpers/grid";
-@import "helpers/utility";
+@import 'helpers/grid';
+@import 'helpers/utility';
