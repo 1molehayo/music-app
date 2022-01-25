@@ -1,6 +1,6 @@
-import { ReactChild, ReactChildren } from "react";
-import Footer from "./footer";
-import Header from "./header";
+import React, { ReactChild, ReactChildren } from 'react';
+import Footer from './Footer';
+import Header from './Header';
 
 interface LayoutProps {
   children: ReactChild | ReactChildren;
