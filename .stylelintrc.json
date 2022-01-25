@@ -1,7 +1,8 @@
 {
   "extends": [
     "stylelint-config-property-sort-order-smacss",
-    "stylelint-config-prettier"
+    "stylelint-config-prettier",
+    "stylelint-config-standard-scss"
   ],
   "plugins": ["stylelint-prettier"],
   "ignoreFiles": ["**/*.html", "**/*.js"],
@@ -36,6 +37,7 @@
     "media-feature-name-no-vendor-prefix": true,
     "media-feature-colon-space-before": "never",
     "media-feature-colon-space-after": "always",
-    "max-empty-lines": null
+    "max-empty-lines": null,
+    "scss/dollar-variable-empty-line-before": "always"
   }
 }

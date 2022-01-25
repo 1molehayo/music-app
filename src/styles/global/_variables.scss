@@ -4,8 +4,8 @@ $colors: (
   dark: #1d1d1d,
   dark-blue: #52527a,
   grey: #656565,
-  light-grey: #eee,
-  primary: #2d9cdb,
+  light-grey: rgb(39 38 38),
+  primary: #eb172f,
   red: #f00,
   white: #fff
 );
@@ -34,9 +34,10 @@ $font-sizes: (
 );
 
 // mobile first
+
 $break-points: (
   // large mobile phones
-  smallest: 0px,
+  extra-small: 0,
   // small tabs or phablets
   small: 600px,
   // tabs and ipads

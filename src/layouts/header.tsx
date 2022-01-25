@@ -5,6 +5,7 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { ColorModeContext } from 'contexts/ColorMode';
 import { capitalizeFirstLetter } from 'utility';
+import logo from 'assets/images/itunes-logo.png';
 
 const Header = () => {
   const theme = useTheme();
@@ -15,8 +16,8 @@ const Header = () => {
       <Container>
         <Box className="header__container">
           <a href="/">
-            Logo
-            <span className="icon-logo header__logo" />
+            <img src={logo} alt="Music app" />
+            <span>Music App</span>
           </a>
 
           <Box className="color-switch" onClick={colorMode.toggleColorMode}>

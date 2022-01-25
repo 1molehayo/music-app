@@ -49,10 +49,12 @@
 // layout utilities
 
 $spaces: 5;
+
 $start: 0;
 
 @each $side in $sides {
   @for $i from 1 through 6 {
+    /* stylelint-disable-next-line scss/dollar-variable-empty-line-before */
     $start: $start + 0.5;
 
     .p#{str-slice($side, 0, 1)}-#{$i} {
@@ -63,6 +65,7 @@ $start: 0;
       margin-#{$side}: #{$start}rem !important;
     }
   }
+
   $start: 0;
 
   .p#{str-slice($side, 0, 1)}-0 {
