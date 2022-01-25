@@ -1,19 +1,28 @@
-import React, { ReactChild, ReactChildren } from 'react';
+import React from 'react';
 import Footer from './Footer';
 import Header from './Header';
 
-interface LayoutProps {
-  children: ReactChild | ReactChildren;
+interface IProps {
+  children?: React.ReactNode;
+  noHeader?: boolean;
 }
 
-export default function Layout({ children }: LayoutProps) {
-  return (
-    <>
-      <Header />
+export default function Layout(WrappedComponent: React.FC) {
+  // eslint-disable-next-line react/display-name
+  return (props: JSX.IntrinsicAttributes & IProps) => {
+    const componentProps = { ...props };
+    delete componentProps.noHeader;
 
-      <main className="page__body">{children}</main>
+    return (
+      <>
+        {!props.noHeader && <Header />}
 
-      <Footer />
-    </>
-  );
+        <main className="page__body">
+          <WrappedComponent {...componentProps} />
+        </main>
+
+        <Footer />
+      </>
+    );
+  };
 }
