@@ -3,8 +3,12 @@
     overflow: hidden;
   }
 
-  &-body {
-    min-height: 80vh;
+  &__body {
+    min-height: calc(100vh - 140px);
+
+    &--no-header {
+      min-height: calc(100vh - 70px);
+    }
   }
 
   &--no-overflow {

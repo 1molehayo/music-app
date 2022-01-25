@@ -8,7 +8,7 @@ function App() {
     <ColorModeProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home noHeader />} />
         </Routes>
       </BrowserRouter>
     </ColorModeProvider>

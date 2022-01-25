@@ -1,3 +1,4 @@
+import { Box, Container, Typography } from '@mui/material';
 import React from 'react';
 
 const Footer = () => {
@@ -7,11 +8,17 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="container footer__container">
-        <p className="footer__text copyright">
-          © {getYear()} Next technology - All rights reserved.
-        </p>
-      </div>
+      <Container>
+        <Box className="footer__container">
+          <Typography
+            variant="body1"
+            component="p"
+            className="font-size-regular"
+          >
+            © {getYear()} Next technology - All rights reserved.
+          </Typography>
+        </Box>
+      </Container>
     </footer>
   );
 };

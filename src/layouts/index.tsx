@@ -1,3 +1,5 @@
+import { Box } from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
 import Footer from './Footer';
 import Header from './Header';
@@ -14,15 +16,19 @@ export default function Layout(WrappedComponent: React.FC) {
     delete componentProps.noHeader;
 
     return (
-      <>
+      <Box sx={{ bgcolor: 'background.default', color: 'text.primary' }}>
         {!props.noHeader && <Header />}
 
-        <main className="page__body">
+        <main
+          className={classNames('page__body', {
+            'page__body--no-header': props.noHeader
+          })}
+        >
           <WrappedComponent {...componentProps} />
         </main>
 
         <Footer />
-      </>
+      </Box>
     );
   };
 }

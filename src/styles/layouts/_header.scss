@@ -3,6 +3,28 @@
   width: 100%;
   border-bottom: 2px solid color(light-grey);
 
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+  }
+
   &__logo {
+  }
+
+  .color-switch {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      @include font-size(regular);
+    }
+
+    &__icon svg {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 }

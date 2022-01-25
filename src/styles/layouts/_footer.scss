@@ -1,12 +1,8 @@
 .footer {
   width: 100%;
-  padding: 2rem 0;
+  height: 70px;
 
   a {
     @include font-weight(bold);
-  }
-
-  &__text {
-    @include font-size(small);
   }
 }

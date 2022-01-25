@@ -1,7 +1,7 @@
 h1,
 h2,
 h3 {
-  @include font-size(m-large);
+  @include font-weight(bold);
 }
 
 h4,
