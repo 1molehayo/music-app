@@ -1,22 +1,19 @@
 import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
+import { Container } from '@mui/material';
 import Layout from 'layouts';
-import logo from 'assets/images/itunes-logo.png';
+import { Logo, SearchBar } from 'components';
 
 function Home() {
   return (
-    <Container>
-      <section className="section">
-        <Typography variant="h1" component="h1">
-          Home
-        </Typography>
+    <div className="home">
+      <Container>
+        <section>
+          <Logo />
 
-        <Box className="logo">
-          <img src={logo} alt="Music app" />
-          <span>Music App</span>
-        </Box>
-      </section>
-    </Container>
+          <SearchBar />
+        </section>
+      </Container>
+    </div>
   );
 }
 

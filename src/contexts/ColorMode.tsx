@@ -26,7 +26,10 @@ const ColorModeProvider: React.FC<IColorModeProps> = ({ children }) => {
     () =>
       createTheme({
         palette: {
-          mode
+          mode,
+          primary: {
+            main: '#eb172f'
+          }
         }
       }),
     [mode]

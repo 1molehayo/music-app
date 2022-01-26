@@ -1,38 +1,25 @@
-import React, { useContext } from 'react';
-import { Box, Container, IconButton, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
-import { ColorModeContext } from 'contexts/ColorMode';
-import { capitalizeFirstLetter } from 'utility';
-import logo from 'assets/images/itunes-logo.png';
+import React from 'react';
+import { Box, Container } from '@mui/material';
+import { Logo } from 'components/Logo';
+import classNames from 'classnames';
+import { ColorSwitch } from 'components';
 
-const Header = () => {
-  const theme = useTheme();
-  const colorMode = useContext(ColorModeContext);
+interface IHeaderProps {
+  noLogo?: boolean;
+}
 
+const Header = ({ noLogo }: IHeaderProps) => {
   return (
     <header className="header">
       <Container>
-        <Box className="header__container">
-          <a href="/">
-            <img src={logo} alt="Music app" />
-            <span>Music App</span>
-          </a>
+        <Box
+          className={classNames('header__container', {
+            'header__container--alt': noLogo
+          })}
+        >
+          {!noLogo && <Logo sm hasLink />}
 
-          <Box className="color-switch" onClick={colorMode.toggleColorMode}>
-            <Typography component="span">
-              {capitalizeFirstLetter(theme.palette.mode)} mode
-            </Typography>
-
-            <IconButton color="inherit" className="color-switch__icon">
-              {theme.palette.mode === 'dark' ? (
-                <Brightness7Icon />
-              ) : (
-                <Brightness4Icon />
-              )}
-            </IconButton>
-          </Box>
+          <ColorSwitch />
         </Box>
       </Container>
     </header>

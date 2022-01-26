@@ -38,3 +38,9 @@ export const notify = ({ type, message }: INotify) => {
     }
   }).showToast();
 };
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const updateObject = (oldObject: any, newProps: any) => ({
+  ...oldObject,
+  ...newProps
+});

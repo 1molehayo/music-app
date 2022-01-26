@@ -5,17 +5,32 @@
 
   &__body {
     min-height: calc(100vh - 140px);
+  }
 
-    &--no-header {
-      min-height: calc(100vh - 70px);
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+
+    img {
+      width: 70px;
+      height: auto;
     }
-  }
 
-  &--no-overflow {
-    overflow: hidden;
-  }
+    span {
+      @include font-size(x-large);
+      @include font-weight(bold);
 
-  &--default {
-    overflow: auto;
+      margin-left: 1rem;
+    }
+
+    &--alt {
+      img {
+        width: 40px;
+      }
+
+      span {
+        @include font-size(medium);
+      }
+    }
   }
 }

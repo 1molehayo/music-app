@@ -38,6 +38,7 @@
     "media-feature-colon-space-before": "never",
     "media-feature-colon-space-after": "always",
     "max-empty-lines": null,
-    "scss/dollar-variable-empty-line-before": "always"
+    "scss/dollar-variable-empty-line-before": "always",
+    "declaration-colon-newline-after": null
   }
 }

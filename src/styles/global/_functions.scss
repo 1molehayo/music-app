@@ -1,5 +1,3 @@
-@use 'sass:math';
-
 // colors
 @function color($key) {
   @if map-has-key($colors, $key) {
