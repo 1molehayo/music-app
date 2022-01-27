@@ -1,4 +1,5 @@
 import Toastify from 'toastify-js';
+import { ALBUM, ARTIST, SONG } from './constants';
 
 export const capitalizeFirstLetter = (str: string) => {
   if (!str) {
@@ -44,3 +45,38 @@ export const updateObject = (oldObject: any, newProps: any) => ({
   ...oldObject,
   ...newProps
 });
+
+export const getSearchEntity = (type = 'all') => {
+  switch (type) {
+    case ALBUM:
+      return 'album';
+
+    case ARTIST:
+      return 'allArtist';
+
+    case SONG:
+      return 'allTrack';
+
+    default:
+      return 'allArtist,album,allTrack';
+  }
+};
+
+export const formatCharLength = (str?: string, len = 50, noElipsis = false) => {
+  if (!str) {
+    return '';
+  }
+
+  if (str.length > len) {
+    if (noElipsis) {
+      return str.substring(0, len - 1);
+    }
+
+    return `${str.substring(0, len - 1)}...`;
+  }
+
+  return str;
+};
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const isArrayEmpty = (arr: string | any[]) => !arr || arr.length === 0;
