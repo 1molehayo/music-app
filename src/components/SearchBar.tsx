@@ -1,23 +1,37 @@
 import React from 'react';
+import classnames from 'classnames';
 import { Box, TextField, InputAdornment } from '@mui/material';
 import LoadingButton from '@mui/lab/LoadingButton';
-import { SearchOutlined } from '@mui/icons-material';
+import { SearchOutlined, CloseOutlined } from '@mui/icons-material';
 import { SearchContext } from 'contexts/Search';
 
-export const SearchBar = () => {
-  const { loading, searchValue, updateSearch } =
-    React.useContext(SearchContext);
+interface ISearchProps {
+  className?: string;
+  loading?: boolean;
+  noButton?: boolean;
+  onSearch?: () => void;
+}
+
+export const SearchBar = ({
+  className,
+  loading,
+  noButton,
+  onSearch
+}: ISearchProps) => {
+  const { searchValue, updateSearch } = React.useContext(SearchContext);
 
   const handleSearch = (event?: { key: string }) => {
     if (!event || event.key === 'Enter') {
-      // search
-      // eslint-disable-next-line no-console
-      console.log(`You searched for ${searchValue}`);
+      if (searchValue) {
+        if (onSearch) {
+          onSearch();
+        }
+      }
     }
   };
 
   return (
-    <Box className="searchbar">
+    <Box className={classnames('searchbar', className)}>
       <Box className="searchbar__inner">
         <TextField
           id="search"
@@ -29,23 +43,38 @@ export const SearchBar = () => {
           onKeyDown={handleSearch}
           InputProps={{
             endAdornment: (
-              <InputAdornment position="end">
-                <SearchOutlined className="searchbar__icon" />
+              <InputAdornment position="end" className="cursor">
+                {searchValue && (
+                  <CloseOutlined
+                    className="searchbar__icon mr-1"
+                    onClick={() => updateSearch('')}
+                  />
+                )}
+                <SearchOutlined
+                  className="searchbar__icon"
+                  onClick={() => handleSearch()}
+                />
               </InputAdornment>
             )
+          }}
+          inputProps={{
+            'aria-label': 'search-input'
           }}
         />
       </Box>
 
-      <LoadingButton
-        className="button"
-        onClick={() => handleSearch()}
-        loading={loading}
-        variant="contained"
-        disabled={!searchValue}
-      >
-        Search Music
-      </LoadingButton>
+      {!noButton && (
+        <LoadingButton
+          className="button"
+          onClick={() => handleSearch()}
+          loading={loading}
+          variant="contained"
+          disabled={!searchValue}
+          aria-label="search-button"
+        >
+          Search Music
+        </LoadingButton>
+      )}
     </Box>
   );
 };
