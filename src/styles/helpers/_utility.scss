@@ -93,6 +93,14 @@ $start: 0;
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
 .flex-column {
   flex-direction: column;
 }
@@ -105,15 +113,6 @@ $start: 0;
   margin: 0 auto;
 }
 
-.divider {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  border: 2px solid color(light-grey);
-
-  @include respond(large) {
-    position: static;
-  }
+.cursor {
+  cursor: pointer !important;
 }

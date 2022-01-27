@@ -1,0 +1,14 @@
+.not-found {
+  @include center-content;
+
+  h1 {
+    @include font-weight(bold);
+
+    @include respond(small) {
+      font-size: 22rem !important;
+    }
+
+    font-size: 15rem !important;
+    letter-spacing: 3px;
+  }
+}

@@ -35,7 +35,7 @@ module.exports = {
   rules: {
     curly: 2,
     eqeqeq: 2,
-    indent: [2, 2, { SwitchCase: 1 }],
+    indent: 'off',
     'comma-dangle': 0,
     'linebreak-style': 0,
     'no-unused-vars': 'warn',
