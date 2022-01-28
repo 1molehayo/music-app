@@ -1,10 +1,15 @@
 import React from 'react';
 import { Box, CircularProgress, circularProgressClasses } from '@mui/material';
+import classnames from 'classnames';
 
-export const Loader = () => {
+interface ILoader {
+  className?: string;
+}
+
+export const Loader: React.FC<ILoader> = ({ className }) => {
   return (
-    <Box className="loader-wrapper">
-      <Box className="loader">
+    <Box className={classnames('loader', className)}>
+      <Box className="loader__inner">
         <CircularProgress
           variant="determinate"
           sx={{
@@ -20,8 +25,7 @@ export const Loader = () => {
           variant="indeterminate"
           disableShrink
           sx={{
-            color: (theme) =>
-              theme.palette.mode === 'light' ? '#eb172f' : '#eb172f',
+            color: '#eb172f',
             animationDuration: '550ms',
             position: 'absolute',
             left: 0,

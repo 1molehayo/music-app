@@ -30,6 +30,45 @@ const ColorModeProvider: React.FC<IColorModeProps> = ({ children }) => {
           primary: {
             main: '#eb172f'
           }
+        },
+        components: {
+          MuiInputLabel: {
+            styleOverrides: {
+              root: {
+                backgroundColor: mode === 'light' ? '#fff' : '#121212'
+              }
+            }
+          },
+          MuiTypography: {
+            variants: [
+              {
+                props: {
+                  variant: 'subtitle1'
+                },
+                style: {
+                  fontSize: 14,
+                  fontWeight: 700,
+                  lineHeight: 1.4
+                }
+              },
+              {
+                props: {
+                  variant: 'body1'
+                },
+                style: {
+                  fontSize: 14
+                }
+              },
+              {
+                props: {
+                  variant: 'body2'
+                },
+                style: {
+                  fontSize: 12
+                }
+              }
+            ]
+          }
         }
       }),
     [mode]

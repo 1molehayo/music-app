@@ -4,6 +4,7 @@ import { Box, TextField, InputAdornment } from '@mui/material';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { SearchOutlined, CloseOutlined } from '@mui/icons-material';
 import { SearchContext } from 'contexts/Search';
+// import { useNavigate } from 'react-router-dom';
 
 interface ISearchProps {
   className?: string;

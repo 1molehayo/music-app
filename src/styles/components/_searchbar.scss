@@ -25,4 +25,9 @@
       @include font-size(regular);
     }
   }
+
+  &--alt {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
