@@ -97,7 +97,8 @@
       "!src/index.tsx",
       "!src/reportWebVitals.ts",
       "!src/**/*.d.ts",
-      "!src/store/**/*.ts"
+      "!src/store/**/*.ts",
+      "!src/model/**/*.ts"
     ]
   }
 }
