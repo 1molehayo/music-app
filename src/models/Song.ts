@@ -12,11 +12,11 @@ interface SongModel {
   artistViewUrl: string;
   collectionViewUrl: string;
   trackViewUrl: string;
-  previewViewUrl: string;
+  previewUrl: string;
   artworkUrl30: string;
   artworkUrl60: string;
   artworkUrl100: string;
-  collectionPrice: string;
+  collectionPrice: number;
   trackPrice: number;
   releaseDate: string;
   collectionExplicitness: string;

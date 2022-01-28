@@ -3,7 +3,7 @@ interface AlbumModel {
   collectionType: string;
   artistId: number;
   collectionId: number;
-  amgArtistId: number;
+  amgArtistId?: number;
   artistName: string;
   collectionName: string;
   collectionCensoredName: string;

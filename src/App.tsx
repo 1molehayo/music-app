@@ -19,7 +19,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home noLogo />} />
               <Route path="/search" element={<SearchResults />} />
-              <Route path="/music/:type" element={<MusicDetails />} />
+              <Route path="/music/:type/:search" element={<MusicDetails />} />
               <Route path="/404" element={<NotFound />} />
               <Route path="*" element={<Navigate to="/404" />} />
             </Routes>
