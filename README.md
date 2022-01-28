@@ -19,6 +19,7 @@ To have the best experience please try to install the libraries locally, includi
 - [classnames](https://jedwatson.github.io/classnames/)
 - [redux](https://redux.js.org/introduction/installation)
 - [react-infinite-scroll-component](https://github.com/ankeetmaini/react-infinite-scroll-component)
+- [axios](https://github.com/axios/axios)
 
 ### Lint
 
