@@ -1,11 +1,9 @@
 import React from 'react';
 import Layout from 'layouts';
 import { Button, Container, Typography } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Error() {
-  const navigate = useNavigate();
-
   return (
     <div className="not-found">
       <Container>
@@ -18,13 +16,11 @@ function Error() {
             Page not found
           </Typography>
 
-          <Button
-            className="button mt-4"
-            variant="contained"
-            onClick={() => navigate('/')}
-          >
-            Search for music
-          </Button>
+          <Link to="/">
+            <Button className="button mt-4" variant="contained">
+              Search for music
+            </Button>
+          </Link>
         </section>
       </Container>
     </div>

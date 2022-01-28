@@ -96,7 +96,8 @@
       "src/**/*.{ts,tsx,js,jsx}",
       "!src/index.tsx",
       "!src/reportWebVitals.ts",
-      "!src/**/*.d.ts"
+      "!src/**/*.d.ts",
+      "!src/store/**/*.ts"
     ]
   }
 }
